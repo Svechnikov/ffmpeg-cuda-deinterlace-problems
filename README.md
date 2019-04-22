@@ -57,11 +57,11 @@ You will see, that the 153-rd frame is out of the sequence.
 
 # <a name="running"></a>Fixing the problems
 
-The reason behind the problems is that sometimes `CUVIDPARSERDISPINFO` has property `progressive_frame` equal to 1 (which is wrong, the videos are interlaced).
-In order to fix the problem we should check if the video is interlaced or progressive in the beginning of a video sequence (the best place for that is `cuvid_handle_video_sequence` function).
+The reason behind the problems is that sometimes `CUVIDPARSERDISPINFO` has property [progressive_frame](https://github.com/FFmpeg/FFmpeg/blob/master/libavcodec/cuviddec.c#L513) equal to 1 (which is wrong, the videos are interlaced).
+In order to fix the problem we should check if the video is interlaced or progressive in the beginning of a video sequence (the best place for that is [cuvid_handle_video_sequence](https://github.com/FFmpeg/FFmpeg/blob/master/libavcodec/cuviddec.c#L107) function).
 And then we just use this information instead of the faulty `progressive_frame` in `CUVIDPARSERDISPINFO`.
 
-I prepared a patch `images/fix.patch`. You can test the patch using a special docker-image:
+I prepared a patch [images/fix.patch](https://github.com/Svechnikov/ffmpeg-cuda-deinterlace-problems/blob/master/images/fix.patch). You can test the patch using a special docker-image:
 
 `docker build images -f images/Dockerfile.fixed -t ffmpeg-cuvid-test`
 
