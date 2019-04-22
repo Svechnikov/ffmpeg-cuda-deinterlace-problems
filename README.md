@@ -10,7 +10,7 @@ There are 2 types of problems when using `adaptive` deinterlace with cuvid:
 
 This repository is intended to prove that such problems exist and to show, how to solve them.
 
-# <a name="preparing"></a>Preparing steps
+# <a name="preparing"></a>Preparation steps
 
 In order to reproduce the problems, you should have:
 
