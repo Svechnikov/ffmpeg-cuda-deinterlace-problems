@@ -5,7 +5,7 @@ FFmpeg cuvid deinterlace problems
 
 There are 2 types of problems when using `adaptive` deinterlace with cuvid:
 
-1. Sometimes, in the middle of transcoding, cuvid outputs frames with visible horizontal lines (as though `weave` deinterlace method was chosen). Here are two consecutive frames which demonstrate this problem: [1](https://raw.githubusercontent.com/Svechnikov/ffmpeg-cuda-deinterlace-problems/master/screens/weave-problem-examples/193.jpg), [2](https://raw.githubusercontent.com/Svechnikov/ffmpeg-cuda-deinterlace-problems/master/screens/weave-problem-examples/194.jpg);
+1. Sometimes, in the middle of transcoding, cuvid outputs frames with visible horizontal lines (as though `weave` deinterlace method was chosen). Here are two consecutive frames which demonstrate this problem (pay attention to the bottom line): [1](https://raw.githubusercontent.com/Svechnikov/ffmpeg-cuda-deinterlace-problems/master/screens/weave-problem-examples/193.jpg), [2](https://raw.githubusercontent.com/Svechnikov/ffmpeg-cuda-deinterlace-problems/master/screens/weave-problem-examples/194.jpg);
 2. Occasionally, on scene changes, cuvid outputs a wrong frame, which should have been shown several seconds before (as if the frame was assigned some wrong PTS value).
 
 This repository is intended to prove that such problems exist and to show, how to solve them.
