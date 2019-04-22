@@ -25,7 +25,7 @@ Building the image:
 
 # <a name="running"></a>Reproducing the weave deinterlace problem
 
-I prepared two samples with which the problems are reproduced.
+I prepared two samples with which the problems are reproduced. These are simple transport mpegts dvb videos.
 
 For the first problem you should use the `weave-problem.ts` sample:
 
