@@ -1,6 +1,6 @@
 FFmpeg cuvid deinterlace problems
 ---
-Update: thanks to folks at ffmpeg, my patch is now [applied](https://github.com/FFmpeg/FFmpeg/commit/703583dbb1f35ccefeb8f2cccd2f99b97a4d482a) to ffmpeg-master branch.
+ **Update**: thanks to folks at ffmpeg, my patch is now [applied](https://github.com/FFmpeg/FFmpeg/commit/703583dbb1f35ccefeb8f2cccd2f99b97a4d482a) to ffmpeg-master branch.
 
 # <a name="about"></a>Description
 
